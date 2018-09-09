@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kdc-admin-pod
+  labels:
+    app: kdc-admin-pod
+spec:
+  containers:
+  - name: kdc-admin
+    image: 10.0.2.2:5000/kdc-admin
+    ports:
+    - containerPort: 749
+    - containerPort: 750
+    - containerPort: 88
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: kdc-admin-srv
+spec:
+  selector:
+    app: kdc-admin-pod
+  ports:
+  - name: port-1
+    protocol: UDP
+    port: 88
+    targetPort: 88
+  - name: port-2
+    protocol: TCP
+    port: 749
+    targetPort: 749
+  - name: port-3
+    protocol: UDP
+    port: 750
+    targetPort: 750

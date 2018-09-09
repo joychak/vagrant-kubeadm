@@ -1,0 +1,7 @@
+.DS_Store
+/admin.conf
+*.log
+.vagrant
+*.gz
+*.bz2
+urandom

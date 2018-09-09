@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kdc-client
+  labels:
+    name: kdc-client
+spec:
+  containers:
+  - name: kdc-client
+    image: 10.0.2.2:5000/kdc-client
+    command: ["sleep", "inf"]
+    
