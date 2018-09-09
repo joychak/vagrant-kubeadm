@@ -44,6 +44,12 @@ Run the following command to prune the status:
 vagrant global-status --prune
 ```
 
+## Some website help
+
+```
+https://github.com/ist-dsi/docker-kerberos
+https://github.com/Comcast/kube-yarn
+```
 
 ## Other Misc Setup instructions in Mac
 
